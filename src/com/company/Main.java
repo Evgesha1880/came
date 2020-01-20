@@ -12,6 +12,8 @@ public class Main {
 
     public static void game() {
         int kw = 0;
+        int L = 0;
+        int N = 0;
         System.out.println("Игрок 1, выбери: \n" +
                 "1 камень \n" +
                 "2 ножницы \n" +
@@ -29,23 +31,35 @@ public class Main {
         System.out.println("Играем");
 
         if (p1 == 1) {
-            if (p2 == 1) { }
-            else if (p2 == 2) { kw++; }
-            else if (p2 == 3) { kw--; }
+            if (p2 == 1) { N++; }
+            else if (p2 == 2) {
+                kw++;
+            } else if (p2 == 3) {
+                L++;
+            }
         }
         if (p1 == 2) {
-            if (p2 == 1) { kw--; }
-            else if (p2 == 2) { }
-            else if (p2 == 3) { kw++;}
+            if (p2 == 1) {
+                L++;
+            } else if (p2 == 2) { N++; }
+            else if (p2 == 3) {
+                kw++;
+            }
         }
         if (p1 == 3) {
             if (p2 == 1) {
                 kw++;
             } else if (p2 == 2) {
-                kw--;
-            } else if (p2 == 3) {
-            }
-            System.out.println(kw);
+                L++;
+            } else if (p2 == 3) { N++; }
+        }
+        if (kw == 1) {
+            System.out.println("Вы выиграли");
+        } else  if (L == 1) {
+            System.out.println("Вы проиграли");
+        }
+        else if (N ==1) {
+            System.out.println("Ничья");
         }
     }
 }
