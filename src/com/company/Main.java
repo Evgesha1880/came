@@ -5,8 +5,20 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        for (int i = 1; i <= 10; i++) {
+        {
             game();
+
+
+
+            System.out.println("Хотители вы продолжить игру?");
+            Scanner ch = new Scanner(System.in);
+            String playnext = ch.nextLine();
+            if (playnext.equals("да")){
+                game();
+            }
+            if (playnext.equals("нет")){
+                System.out.println("Спасибо, что были с нами))");
+            }
         }
     }
 
@@ -31,8 +43,9 @@ public class Main {
         System.out.println("Играем");
 
         if (p1 == 1) {
-            if (p2 == 1) { N++; }
-            else if (p2 == 2) {
+            if (p2 == 1) {
+                N++;
+            } else if (p2 == 2) {
                 kw++;
             } else if (p2 == 3) {
                 L++;
@@ -41,8 +54,9 @@ public class Main {
         if (p1 == 2) {
             if (p2 == 1) {
                 L++;
-            } else if (p2 == 2) { N++; }
-            else if (p2 == 3) {
+            } else if (p2 == 2) {
+                N++;
+            } else if (p2 == 3) {
                 kw++;
             }
         }
@@ -51,15 +65,17 @@ public class Main {
                 kw++;
             } else if (p2 == 2) {
                 L++;
-            } else if (p2 == 3) { N++; }
+            } else if (p2 == 3) {
+                N++;
+            }
         }
         if (kw == 1) {
             System.out.println("Вы выиграли");
-        } else  if (L == 1) {
+        } else if (L == 1) {
             System.out.println("Вы проиграли");
-        }
-        else if (N ==1) {
+        } else if (N == 1) {
             System.out.println("Ничья");
         }
     }
+
 }
