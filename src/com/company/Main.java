@@ -5,23 +5,32 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        {
-            game();
+        game();
 
-
-
-            System.out.println("Хотители вы продолжить игру?");
-            Scanner ch = new Scanner(System.in);
-            String playnext = ch.nextLine();
-            if (playnext.equals("да")){
-                game();
-            }
-            if (playnext.equals("нет")){
-                System.out.println("Спасибо, что были с нами))");
-            }
+        System.out.println("Хотители вы продолжить игру?");
+        Scanner ch = new Scanner(System.in);
+        String playnext = ch.nextLine();
+        if (playnext.equals("да")) {
+            go();
         }
-    }
+        if (playnext.equals("нет")) {
+            System.out.println("Спасибо, что были с нами))");
+        }
 
+    }
+    public static void go() {
+        game();
+        System.out.println("Хотители вы продолжить игру?");
+        Scanner ch = new Scanner(System.in);
+        String playnext = ch.nextLine();
+        if (playnext.equals("да")) {
+            go();
+        }
+        if (playnext.equals("нет")) {
+            System.out.println("Спасибо, что были с нами))");
+        }
+
+    }
     public static void game() {
         int kw = 0;
         int L = 0;
@@ -39,9 +48,7 @@ public class Main {
                 "3 бумага \n");
         Scanner scanner1 = new Scanner(System.in);
         int p2 = scanner1.nextInt();
-
-        System.out.println("Играем");
-
+//        System.out.println("Играем");
         if (p1 == 1) {
             if (p2 == 1) {
                 N++;
