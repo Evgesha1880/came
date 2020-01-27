@@ -7,11 +7,11 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Привет, Дружок\n"+
                 "    (⌒ω⌒)\n"+
-                "Жедаю тебя удачкки\n"+
+                "Желаю тебя удачкки\n"+
                 "   ＼(≧▽≦)／");
         game();
 
-        System.out.println("Хотители вы продолжить игру?");
+        System.out.println("Хотите ли вы продолжить игру?");
         Scanner ch = new Scanner(System.in);
         String playnext = ch.nextLine();
         if (playnext.equals("да")) {
@@ -25,7 +25,7 @@ public class Main {
     }
     public static void go() {
         game();
-        System.out.println("Хотители вы продолжить игру?");
+        System.out.println("Хотите ли вы продолжить игру?");
         Scanner ch = new Scanner(System.in);
         String playnext = ch.nextLine();
         if (playnext.equals("да")) {
@@ -40,7 +40,7 @@ public class Main {
         int kw = 0;
         int L = 0;
         int N = 0;
-        System.out.println("Итак теперь выбери: \n" +
+        System.out.println("Итак, теперь выбери: \n" +
                 "1 камень \n" +
                 "2 ножницы \n" +
                 "3 бумага \n");
@@ -128,4 +128,10 @@ public class Main {
         }
     }
 
+public static void random(){
+        int a=1;
+        int b=3;
+    int random_number1 = a + (int) (Math.random() * b);
+
+}
 }
