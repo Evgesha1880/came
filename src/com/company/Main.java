@@ -10,11 +10,16 @@ public class Main {
 
     public static void main(String[] args) {
 
+<<<<<<< HEAD
         System.out.println("Привет, Дружок\n" +
                 "    (⌒ω⌒)\n");
         start();
     }
     public static void start(){
+=======
+        System.out.println("Привет, Дружок\n"+
+                "    (⌒ω⌒)\n");
+>>>>>>> 24cfa1dd67f66af3f90a1ad82c9d514b251722c5
         System.out.println("Для начала игры выбери режим:\n"+
                 "1 Игра с другом \n"+
                 "2 Игра с компьютером");
@@ -62,6 +67,7 @@ public class Main {
         }
         else {
             System.out.println("Напишите точнее))\n"+"Можно ответить <да> или <нет>");
+<<<<<<< HEAD
             System.out.println("Хотите ли вы продолжить игру?");
             ch = new Scanner(System.in);
             playnext = ch.nextLine();
@@ -71,6 +77,8 @@ public class Main {
             else if (playnext.equals("нет")) {
                 System.out.println("Спасибо, что были с нами))\n" +"         ♡(≧◡≦)♡");
             }
+=======
+>>>>>>> 24cfa1dd67f66af3f90a1ad82c9d514b251722c5
         }
 
     }
@@ -88,6 +96,7 @@ public class Main {
         }
         else {
             System.out.println("Напишите точнее))\n"+"Можно ответить <да> или <нет>");
+<<<<<<< HEAD
             System.out.println("Хотите ли вы продолжить игру?");
             ch = new Scanner(System.in);
             playnext = ch.nextLine();
@@ -99,6 +108,10 @@ public class Main {
             }
             }
         }
+=======
+        }
+    }
+>>>>>>> 24cfa1dd67f66af3f90a1ad82c9d514b251722c5
     public static void game() {
         int kw = 0;
         int L = 0;
